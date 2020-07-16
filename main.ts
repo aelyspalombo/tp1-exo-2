@@ -1,10 +1,16 @@
 input.onButtonPressed(Button.A, function () {
     led.unplot(x, y)
+    if (x == 0) {
+        x = 5
+    }
     x = x - 1
     led.plot(x, y)
 })
 input.onButtonPressed(Button.B, function () {
     led.unplot(x, y)
+    if (x == 4) {
+        x = -1
+    }
     x += 1
     led.plot(x, y)
 })
